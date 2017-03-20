@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A Vue.js project",
     "author": "lancedai <lancedai@lagou.com>",
-    "homepage": "https://lagouyun.github.io/react-app/",
+    "homepage": "https://lagouyun.github.io/vue-app/",
     "private": true,
     "scripts": {
         "dev": "node build/dev-server.js",
