@@ -1,0 +1,104 @@
+.header {
+    background-color: #fff;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+.user-name {
+    font-size: 32px;/*px*/
+    color: #333;
+    text-align: center;
+    margin-top: 33px;
+    line-height: 1;
+}
+.greeting {
+    margin-top: 20px;
+    font-size: 26px; /*px*/
+    color: #999;
+    text-align: center;
+}
+.company {
+    margin-top: 20px;
+    background-color: #fff;
+    .company-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 26px;
+        vertical-align: text-top;
+    }
+    .company-selector {
+        .select {
+            height: 28px;
+            line-height: 28px;
+            padding: 0 20px 0 0;
+            text-align: right;
+            direction: rtl;
+            color: #00b38a;
+        }
+    }
+}
+.grids-middle {
+    &:after {
+        display: none;
+    }
+    .grid:before,.grid:after {
+        display: none;
+    }
+}
+.grids-bottom {
+    margin-top: 20px;
+    background-color: #fff;
+    flex-direction: column;
+    flex-flow: row wrap;
+    padding: 0 30px;
+    &:before {
+        display: none;
+    }
+    .grid {
+        display: flex;
+        flex: 1 50%;
+        flex-direction: row;
+        padding: 38px 0 34px 0;
+        &:before {
+            height: 50%;
+            top:25%;
+        }
+        &:nth-child(2n) {
+            .grid-icon {
+                padding-left: 30px;
+            }
+            &:before {
+                display: none;
+            }
+        }
+        .grid-icon {
+            text-align: left;
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 26px;
+            }
+        }
+        .grid-label {
+            flex: 1;
+            flex-direction: column;
+            margin-top: 0;
+            text-align: left;
+            .label {
+                display: block;
+                line-height: 1;
+                font-size: 28px; /*px*/
+            }
+            .label-des {
+                display: block;
+                line-height: 1;
+                font-size: 24px;/*px*/;
+                color: #999;
+                margin-top: 15px;
+                &.link {
+                    color: #00b38a;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import "../base/variable";
+@import "../base/mixin/setArrow";
+@import "../base/mixin/setOnepx";
+
+.grids {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    &:before {
+        .setTopLine(@gridBorderColor);
+    }
+    &:after {
+        .setLeftLine(@gridBorderColor);
+    }
+}
+
+.grid {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 34px 0;
+    &:before {
+        .setRightLine(@gridBorderColor);
+    }
+    &:after {
+        .setBottomLine(@gridBorderColor);
+    }
+
+    &:last-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.grid-icon {
+    text-align: center;
+    font-size: 0;
+    img {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+    }
+
+    & + .grid-label{
+        margin-top: 20px;
+    }
+}
+
+.grid-label {
+    display: block;
+    text-align: center;
+    color: @textColorLight;
+    font-size: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
